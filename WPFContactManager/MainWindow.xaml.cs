@@ -24,5 +24,32 @@ namespace WPFContactManager
         {
             InitializeComponent();
         }
+
+        private void AddContact_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 wd1 = new Window1();
+            wd1.Show();
+        }
+
+        private void DeleteContact_Click(object sender, RoutedEventArgs e)
+        {
+            Window4 wd4 = new Window4();
+            wd4.Show();
+        }
+
+        private void UpdateContact_Click(object sender, RoutedEventArgs e)
+        {
+            Window3 wd3 = new Window3();
+            wd3.Show();
+        }
+
+        private void ViewContact_Click(object sender, RoutedEventArgs e)
+        {
+            Window2 wd2 = new Window2();
+            wd2.Show();
+        }
+
     }
+
+
 }

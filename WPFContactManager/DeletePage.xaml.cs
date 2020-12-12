@@ -23,5 +23,12 @@ namespace WPFContactManager
         {
             InitializeComponent();
         }
+
+        private void DeleteContactConfirm(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
     }
 }
