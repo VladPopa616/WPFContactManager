@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
+using System.IO;
 
 namespace WPFContactManager
 {
@@ -47,6 +49,38 @@ namespace WPFContactManager
         {
             Window2 wd2 = new Window2();
             wd2.Show();
+        }
+
+        private void ImportCSV_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog opf = new OpenFileDialog();
+            opf.Filter = "Csv files (*.csv)|*.csv|All files(*.*)|*.*";
+            List<Contact> fileContact = new List<Contact>();
+
+            if(opf.ShowDialog() == true)
+            {
+                string[] fileContents = File.ReadAllLines(opf.FileName);
+
+                foreach(string s in fileContents)
+                {
+                    string[] items = s.Split(',');
+                    Contact contact = new Contact(items[0], items[1], items[2], items[3]);
+                    fileContact.Add(contact);
+                }
+            }
+
+            var data = SQLCommunications.Instance;
+            foreach(Contact contact in fileContact)
+            {
+                data.AddContacts(contact);
+            }
+
+            MessageBox.Show(opf.FileName, "Added to database", MessageBoxButton.OK);
+        }
+
+        private void ExportCSV_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
     }
