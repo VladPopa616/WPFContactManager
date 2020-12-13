@@ -9,7 +9,7 @@ namespace WPFContactManager
 {
     class SQLCommunications
     {
-        private const string CON_STRING = @"data source=localhost\SQLEXPRESS2;database = ContactManager;Trusted_Connection=True";
+        private const string CON_STRING = @"data source=localhost\SQLEXPRESS;database = ContactManager;Trusted_Connection=True";
 
         private SQLCommunications()
         {
