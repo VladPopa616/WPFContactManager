@@ -19,6 +19,7 @@ namespace WPFContactManager
     /// </summary>
     public partial class Window4 : Window
     {
+        SQLCommunications sql = SQLCommunications.Instance;
         public Window4()
         {
             InitializeComponent();
@@ -26,7 +27,11 @@ namespace WPFContactManager
 
         private void DeleteContactConfirm(object sender, RoutedEventArgs e)
         {
+            Contact contact = new Contact(int.Parse(DelTextBox.Text));
+            sql.DeleteContacts(contact);
 
+            MessageBox.Show(contact.ID.ToString(), "Contact has been deleted Success!",MessageBoxButton.OK);
+            
         }
 
 

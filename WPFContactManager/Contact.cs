@@ -15,6 +15,16 @@ namespace WPFContactManager
 
         public string phone { get; set; }
 
+        public Contact()
+        {
+
+        }
+
+        public Contact(int id)
+        {
+            this.ID = id;
+        }
+
         public Contact(object id, object fname, object lname, object email, object phone)
         {
             this.ID = int.Parse(id.ToString());

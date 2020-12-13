@@ -98,13 +98,13 @@ namespace WPFContactManager
             }
         }
 
-        public void DeleteContacts(List<Contact> contacts)
+        public void DeleteContacts(Contact contact)
         {
-            foreach (Contact contact in contacts)
-            {
+            
+            
                 using (var con = new SqlConnection(CON_STRING))
                 {
-                    var query = "delete from contacts where Id=@Id";
+                    var query = "DELETE from Contact where Id=@Id";
                     using (var cmd = new SqlCommand(query, con))
                     {
 
@@ -115,7 +115,7 @@ namespace WPFContactManager
                         cmd.ExecuteNonQuery();
                     }
                 }
-            }
+            
         }
     }
 }
