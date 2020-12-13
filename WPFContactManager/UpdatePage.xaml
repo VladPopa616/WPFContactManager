@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFContactManager"
         mc:Ignorable="d"
-        Title="Window3" Height="600" Width="700">
-    <Grid Background="LightGray">
+        Title="Update" Height="600" Width="700">
+    <Grid Background="White">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="2*"/>
@@ -22,7 +22,7 @@
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
 
-        <Label x:Name="Header" Background="DarkGray" Height="auto" Grid.Row="0" Grid.ColumnSpan="2" Content="Update Contact" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" FontWeight="Bold"/>
+        <Label x:Name="Header" Background="LightGray" Height="auto" Grid.Row="0" Grid.ColumnSpan="2" Content="Update Contact" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" FontWeight="Bold"/>
         <Label x:Name="IdLabel" Height="auto" Grid.Row="1" Content="Id" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" Margin="0,5.6,19.6,9.8" />
         <Label x:Name="FnLabel" Height="auto" Grid.Row="2" Content="First Name" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" Margin="0,5.6,19.6,9.8" />
         <Label x:Name="LnLabel" Height="auto" Grid.Row="3" Content="Last Name" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" Margin="0,5.6,19.6,9.8" />
@@ -36,7 +36,7 @@
         <TextBox x:Name="emailInput" Height="auto" Width="auto" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" FontSize="40" Margin="9.8,5.6,19.6,9.8"/>
         <TextBox x:Name="phoneInput" Height="auto" Width="auto" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" FontSize="40" Margin="9.8,5.6,19.6,9.8"/>
 
-        <Button x:Name="ConfirmUpdate" Background="Blue" Grid.Row="6" Grid.ColumnSpan="2" Content="Update Contact" FontSize="40" FontWeight="Bold" Click="ConfirmUpdateClick"/>
+        <Button x:Name="ConfirmUpdate" Style="{StaticResource button}" Grid.Row="6" Grid.ColumnSpan="2" Content="Update Contact" FontSize="40" FontWeight="Bold" Click="ConfirmUpdateClick"/>
 
 
 

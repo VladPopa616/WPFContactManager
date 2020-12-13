@@ -88,7 +88,7 @@ namespace WPFContactManager
 
             if(sfd.ShowDialog() == true)
             {
-                using(StreamWriter sw = File.CreateText(@"D:\ExportContacts.csv"))
+                using(StreamWriter sw = File.CreateText(@"C:\Users\lawre\Downloads\ExportContacts.csv"))
                 {
                     foreach(Contact contact in contacts)
                     {

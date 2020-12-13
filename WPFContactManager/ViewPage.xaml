@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFContactManager"
         mc:Ignorable="d"
-        Title="Window2" Height="450" Width="800">
+        Title="List" Height="450" Width="800">
 
     <ListView Margin="10" x:Name="dataView" Loaded="OnLoad" MouseDoubleClick="ShowDetails">
         <ListView.View>
             <GridView>
                 
-                <GridViewColumn Header="ID">
+                <GridViewColumn Header="ID" Width="Auto">
                     <GridViewColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding ID}" FontWeight="Bold"/>
@@ -19,7 +19,7 @@
                      </GridViewColumn.CellTemplate>
                 </GridViewColumn>
 
-                <GridViewColumn Header="First name">
+                <GridViewColumn Header="First name" Width="Auto">
                     <GridViewColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding fn}" FontWeight="Bold"/>
@@ -27,7 +27,7 @@
                     </GridViewColumn.CellTemplate>
                 </GridViewColumn>
 
-                <GridViewColumn Header="Last Name">
+                <GridViewColumn Header="Last Name" Width="Auto">
                     <GridViewColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding ln}" FontWeight="Bold"/>
@@ -35,7 +35,7 @@
                     </GridViewColumn.CellTemplate>
                 </GridViewColumn>
 
-                <GridViewColumn Header="Email">
+                <GridViewColumn Header="Email" Width="Auto">
                     <GridViewColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding email}" FontWeight="Bold"/>
@@ -43,7 +43,7 @@
                     </GridViewColumn.CellTemplate>
                 </GridViewColumn>
 
-                <GridViewColumn Header="Phone Number">
+                <GridViewColumn Header="Phone Number" Width="Auto">
                     <GridViewColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding phone}" FontWeight="Bold"/>

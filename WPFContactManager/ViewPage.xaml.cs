@@ -38,7 +38,7 @@ namespace WPFContactManager
         private void ShowDetails(object sender, RoutedEventArgs e)
         {
 
-            MessageBox.Show(dataView.SelectedItem.ToString());
+            MessageBox.Show(dataView.SelectedItem.ToString(), "Information",MessageBoxButton.OK);
         }
        
 

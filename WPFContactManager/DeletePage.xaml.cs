@@ -30,7 +30,7 @@ namespace WPFContactManager
             Contact contact = new Contact(int.Parse(DelTextBox.Text));
             sql.DeleteContacts(contact);
 
-            MessageBox.Show(contact.ID.ToString(), "Contact has been deleted Success!",MessageBoxButton.OK);
+            MessageBox.Show("Contact #" + contact.ID.ToString() + " has been deleted Success!", "Success!",MessageBoxButton.OK);
             
         }
 

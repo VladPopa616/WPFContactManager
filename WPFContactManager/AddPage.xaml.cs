@@ -36,10 +36,6 @@ namespace WPFContactManager
                 Contact contact = new Contact(Create_FirstName.Text, Create_LastName.Text, Create_Email.Text, Create_PhoneNumber.Text);
                 sql.AddContacts(contact);
 
-
-                MessageBox.Show(contact.fn, "Success!", MessageBoxButton.OK);
-
-
                 MessageBox.Show("Your contact has been added to the database", "Success!", MessageBoxButton.OK);
             }
         }

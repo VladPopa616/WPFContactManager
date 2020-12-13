@@ -36,7 +36,7 @@ namespace WPFContactManager
 
             sql.UpdateContacts(contact);
 
-            MessageBox.Show(contact.ID.ToString(), "Success, Contact updated", MessageBoxButton.OK);
+            MessageBox.Show("Successful update for contact #" + contact.ID.ToString(), "Success!" , MessageBoxButton.OK);
         }
 
     }
