@@ -24,6 +24,14 @@ namespace WPFContactManager
             this.phone = phone.ToString();
         }
 
+        public Contact(object fname, object lname, object email, object phone)
+        {
+            this.fn = fname.ToString();
+            this.ln = lname.ToString();
+            this.email = email.ToString();
+            this.phone = phone.ToString();
+        }
+
         public override string ToString()
         {
             return ID + "," + fn + "," + ln + "," + email + "," + phone;

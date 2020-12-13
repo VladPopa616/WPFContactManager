@@ -13,7 +13,7 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -24,18 +24,18 @@
 
         <!--Labels-->
         <Label Grid.Row="0" Grid.Column="1" Content="Add a Contact" Style="{StaticResource labelTitle}" HorizontalAlignment="Center" FontSize="40"/>
-        <Label Grid.Row="1" Content="Id:" Style="{StaticResource label}"/>
-        <Label Grid.Row="2" Content="First Name:" Style="{StaticResource label}"/>
-        <Label Grid.Row="3" Content="Last Name:" Style="{StaticResource label}"/>
-        <Label Grid.Row="4" Content="Email:" Style="{StaticResource label}"/>
-        <Label Grid.Row="5" Content="Phone Number:" Style="{StaticResource label}"/>
+       
+        <Label Grid.Row="1" Content="First Name:" Style="{StaticResource label}"/>
+        <Label Grid.Row="2" Content="Last Name:" Style="{StaticResource label}"/>
+        <Label Grid.Row="3" Content="Email:" Style="{StaticResource label}"/>
+        <Label Grid.Row="4" Content="Phone Number:" Style="{StaticResource label}"/>
 
         <!--Input-->
-        <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource TextBox}" x:Name="Create_Id"/>
-        <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource TextBox}" x:Name="Create_FirstName"/>
-        <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource TextBox}" x:Name="Create_LastName"/>
-        <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource TextBox}" x:Name="Create_Email"/>
-        <TextBox Grid.Row="5" Grid.Column="1" Style="{StaticResource TextBox}" x:Name="Create_PhoneNumber"/>
+       
+        <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource TextBox}" x:Name="Create_FirstName"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource TextBox}" x:Name="Create_LastName"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource TextBox}" x:Name="Create_Email"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Style="{StaticResource TextBox}" x:Name="Create_PhoneNumber"/>
 
         <!--Button-->
         <Button Grid.Row="6" Grid.Column="1" Content="Submit" Style="{StaticResource button}" Click="Add_Contact"/>

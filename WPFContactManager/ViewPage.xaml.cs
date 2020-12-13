@@ -19,9 +19,24 @@ namespace WPFContactManager
     /// </summary>
     public partial class Window2 : Window
     {
+        SQLCommunications sql = SQLCommunications.Instance;
         public Window2()
         {
             InitializeComponent();
+            ShowContacts();
         }
+
+        private void ShowContacts()
+        {
+            Contact contact = new Contact(FirstNameBox.Text, LastNameBox.Text, EmailBox.Text, PhoneBox.Text);
+            FirstNameBox.Text = contact.fn;
+            LastNameBox.Text = contact.ln;
+            EmailBox.Text = contact.email;
+            PhoneBox.Text = contact.phone;
+
+            sql.ReadContacts(contact);
+        }
+       
+
     }
 }

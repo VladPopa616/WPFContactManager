@@ -30,7 +30,7 @@
         <Label x:Name="phoneLabel" Height="auto" Grid.Row="5" Content="Phone Number" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" Margin="0,5.6,19.6,9.8" />
 
 
-        <Label x:Name="Id" Height="auto" Width="auto" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40"/>
+        <TextBox x:Name="Id" Height="auto" Width="auto" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"  FontSize="40" Margin="9.8,5.6,19.6,9.8"/>
         <TextBox x:Name="FnInput" Height="auto" Width="auto" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" FontSize="40" Margin="9.8,5.6,19.6,9.8"/>
         <TextBox x:Name="LnInput" Height="auto" Width="auto" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" FontSize="40" Margin="9.8,5.6,19.6,9.8"/>
         <TextBox x:Name="emailInput" Height="auto" Width="auto" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" FontSize="40" Margin="9.8,5.6,19.6,9.8"/>

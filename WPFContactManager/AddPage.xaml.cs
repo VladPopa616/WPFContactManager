@@ -33,7 +33,7 @@ namespace WPFContactManager
             }
             else
             {
-                Contact contact = new Contact(Create_Id.Text, Create_FirstName.Text, Create_LastName.Text, Create_Email.Text, Create_PhoneNumber.Text);
+                Contact contact = new Contact(Create_FirstName.Text, Create_LastName.Text, Create_Email.Text, Create_PhoneNumber.Text);
                 sql.AddContacts(contact);
 
 

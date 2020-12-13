@@ -9,7 +9,7 @@ namespace WPFContactManager
 {
     class SQLCommunications
     {
-        private const string CON_STRING = @"data source=localhost\SQLEXPRESS2;database = Contact;Trusted_Connection=True";
+        private const string CON_STRING = @"data source=localhost\SQLEXPRESS;database = ContactManager;Trusted_Connection=True";
 
         private SQLCommunications()
         {
@@ -31,11 +31,12 @@ namespace WPFContactManager
         {
             using (var con = new SqlConnection(CON_STRING))
             {
-                var query = "insert into FirstName, LastName, Email, Phonenumber values(@FirstName, @LastName, @desc)";
+                var query = "insert into Contact(FirstName, LastName, Email, PhoneNumber) values(@FirstName, @LastName, @Email, @PhoneNumber)";
                 using (SqlCommand cm = new SqlCommand(query, con))
                 {
                     con.Open();
 
+                    
                     cm.Parameters.AddWithValue("@FirstName", contact.fn);
                     cm.Parameters.AddWithValue("@LastName", contact.ln);
                     cm.Parameters.AddWithValue("@Email", contact.email);
@@ -53,7 +54,7 @@ namespace WPFContactManager
             List<Contact> contacts = new List<Contact>();
             using (var con = new SqlConnection(CON_STRING))
             {
-                var query = "select * from contact";
+                var query = "select Id, FirstName, LastName, Email, PhoneNumber from contact";
 
                 using (var cmd = new SqlCommand(query, con))
                 {
@@ -81,11 +82,12 @@ namespace WPFContactManager
         {
             using (var con = new SqlConnection(CON_STRING))
             {
-                var query = "UPDATE Contact SET FirstName=@FirstName, LastName=@LastName, Email=@Email, Phone=@Phone";
+                var query = "UPDATE Contact SET FirstName=@FirstName, LastName=@LastName, Email=@Email, PhoneNumber=@Phone WHERE Id=@Id";
                 using (var cmd = new SqlCommand(query, con))
                 {
                     con.Open();
 
+                    cmd.Parameters.AddWithValue("@Id", contact.ID);
                     cmd.Parameters.AddWithValue("@FirstName", contact.fn);
                     cmd.Parameters.AddWithValue("@LastName", contact.ln);
                     cmd.Parameters.AddWithValue("@Email", contact.email);
@@ -102,15 +104,12 @@ namespace WPFContactManager
             {
                 using (var con = new SqlConnection(CON_STRING))
                 {
-                    var query = "delete from contacts where FirstName=@FirstName and LastName=@LastName and Email=@Email and Phone=@Phone";
+                    var query = "delete from contacts where Id=@Id";
                     using (var cmd = new SqlCommand(query, con))
                     {
 
+                        cmd.Parameters.AddWithValue(@"Id", contact.ID);
 
-                        cmd.Parameters.AddWithValue("@FirstName", contact.fn);
-                        cmd.Parameters.AddWithValue("@LastName", contact.ln);
-                        cmd.Parameters.AddWithValue("@Email", contact.email);
-                        cmd.Parameters.AddWithValue("@Phone", contact.phone);
 
                         con.Open();
                         cmd.ExecuteNonQuery();

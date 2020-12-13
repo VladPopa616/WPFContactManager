@@ -27,7 +27,7 @@ namespace WPFContactManager
 
         private void ConfirmUpdateClick(object sender, RoutedEventArgs e)
         {
-            Contact contact = new Contact(Id.Content, FnInput.Text, LnInput.Text, emailInput.Text, phoneInput.Text);
+            Contact contact = new Contact(Id.Text, FnInput.Text, LnInput.Text, emailInput.Text, phoneInput.Text);
 
             contact.fn = FnInput.Text.ToString();
             contact.ln = LnInput.Text.ToString();
@@ -35,6 +35,8 @@ namespace WPFContactManager
             contact.phone = phoneInput.Text.ToString();
 
             sql.UpdateContacts(contact);
+
+            MessageBox.Show(contact.ID.ToString(), "Success, Contact updated", MessageBoxButton.OK);
         }
 
     }
