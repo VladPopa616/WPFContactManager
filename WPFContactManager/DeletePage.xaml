@@ -19,10 +19,7 @@
 
         <Label Grid.Row="0" Content="Which contact do you want to delete ?" FontFamily="Arial" FontSize="40" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="Auto" Width="Auto"/>
         <Label Grid.Row="0" Content="(Use his/her ID)" FontFamily="Arial" FontSize="35" FontWeight="Thin" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" Height="Auto" Width="Auto"/>
-        <TextBox Grid.Row="1" Grid.RowSpan="2" Grid.Column="0"  x:Name="DelTextBox"  Background="white" Width="792"  FontSize="60" VerticalContentAlignment="Center"  VerticalAlignment="Stretch" HorizontalContentAlignment="Center"/>
+        <TextBox Grid.Row="1" Grid.RowSpan="2" Grid.Column="0"  x:Name="DelTextBox"  Background="white" Width="792"  FontSize="20" VerticalContentAlignment="Center"  VerticalAlignment="Stretch" HorizontalContentAlignment="Center"/>
         <Button Grid.Row="2" Content="Delete Contact"  Style="{StaticResource button}" Click="DeleteContactConfirm"/>
-
-
-
     </Grid>
 </Window>
