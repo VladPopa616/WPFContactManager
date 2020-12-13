@@ -22,6 +22,7 @@ namespace WPFContactManager
     /// </summary>
     public partial class MainWindow : Window
     {
+        SQLCommunications sql = SQLCommunications.Instance;
         public MainWindow()
         {
             InitializeComponent();
@@ -80,7 +81,21 @@ namespace WPFContactManager
 
         private void ExportCSV_Click(object sender, RoutedEventArgs e)
         {
+            List<Contact> contacts = sql.ReadContacts();
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Csv files (*.csv)|*.csv|All files(*.*)|*.*";
+            
 
+            if(sfd.ShowDialog() == true)
+            {
+                using(StreamWriter sw = File.CreateText(@"D:\ExportContacts.csv"))
+                {
+                    foreach(Contact contact in contacts)
+                    {
+                        sw.WriteLine(contact.ToString());
+                    }
+                }
+            }
         }
 
     }

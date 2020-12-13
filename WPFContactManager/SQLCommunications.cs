@@ -49,12 +49,12 @@ namespace WPFContactManager
 
 
         }
-        public List<Contact> ReadContacts(Contact contact)
+        public List<Contact> ReadContacts()
         {
             List<Contact> contacts = new List<Contact>();
             using (var con = new SqlConnection(CON_STRING))
             {
-                var query = "select Id, FirstName, LastName, Email, PhoneNumber from contact";
+                var query = "select Id, FirstName, LastName, Email, PhoneNumber from Contact";
 
                 using (var cmd = new SqlCommand(query, con))
                 {
@@ -64,13 +64,14 @@ namespace WPFContactManager
                     {
                         while (reader.Read())
                         {
+                            Contact contact = new Contact();
                             object Id = reader["Id"];
-                            object FName = reader["fn"];
-                            object LName = reader["ln"];
-                            object Email = reader["email"];
-                            object Phone = reader["phone"];
+                            object FName = reader["FirstName"];
+                            object LName = reader["LastName"];
+                            object Email = reader["Email"];
+                            object Phone = reader["PhoneNumber"];
 
-                            contacts.Add(new Contact(Id, FName, LName, Email, Phone));
+                            contacts.Add(contact);
                         }
                     }
                 }

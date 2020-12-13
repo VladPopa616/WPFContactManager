@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Microsoft.Win32;
+using System.Data.SqlClient;
 
 namespace WPFContactManager
 {
@@ -23,18 +25,15 @@ namespace WPFContactManager
         public Window2()
         {
             InitializeComponent();
-            ShowContacts();
+            
         }
 
-        private void ShowContacts()
+        private void Data_Loaded(object sender, RoutedEventArgs e)
         {
-            Contact contact = new Contact(FirstNameBox.Text, LastNameBox.Text, EmailBox.Text, PhoneBox.Text);
-            FirstNameBox.Text = contact.fn;
-            LastNameBox.Text = contact.ln;
-            EmailBox.Text = contact.email;
-            PhoneBox.Text = contact.phone;
-
-            sql.ReadContacts(contact);
+            List<Contact> contacts = new List<Contact>();
+            contacts.Add(sql.ReadContacts().ToList());
+            dataView.ItemsSource = contacts;
+            
         }
        
 

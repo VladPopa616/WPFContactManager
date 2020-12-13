@@ -6,17 +6,20 @@
         xmlns:local="clr-namespace:WPFContactManager"
         mc:Ignorable="d"
         Title="Window2" Height="450" Width="800">
-    <Grid Background="White">
 
-        <StackPanel Margin="10">
+    <ListView Margin="10" Name="dataView">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <WrapPanel>
+                    <TextBlock Text="{Binding ID}" FontWeight="Bold"/>
+                    <TextBlock Text="{Binding FirstName}" FontWeight="Bold"/>
+                    <TextBlock Text="{Binding LastName}" FontWeight="Bold"/>
+                    <TextBlock Text="{Binding Email}" FontWeight="Bold"/>
+                    <TextBlock Text="{Binding PhoneNumber}" FontWeight="Bold"/>
+                </WrapPanel>
+            </DataTemplate>
+        </ListView.ItemTemplate>
 
-            <Label Content="Contact List" FontSize="40" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
-            <TextBlock x:Name="FirstNameBox" Width="300" FontSize="32" HorizontalAlignment="Center"/>
-            <TextBlock x:Name="LastNameBox" Width="300" FontSize="32" HorizontalAlignment="Center"/>
-            <TextBlock x:Name="EmailBox" Width="300" FontSize="32" HorizontalAlignment="Center"/>
-            <TextBlock x:Name="PhoneBox" Width="300" FontSize="32" HorizontalAlignment="Center"/>
-
-        </StackPanel>
-
-    </Grid>
+    </ListView>
+    
 </Window>
