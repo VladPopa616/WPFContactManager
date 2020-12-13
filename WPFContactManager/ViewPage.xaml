@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Window2" Height="450" Width="800">
 
-    <ListView Margin="10" x:Name="dataView" Loaded="OnLoad">
+    <ListView Margin="10" x:Name="dataView" Loaded="OnLoad" MouseDoubleClick="ShowDetails">
         <ListView.View>
             <GridView>
                 

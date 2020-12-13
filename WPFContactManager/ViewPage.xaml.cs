@@ -34,6 +34,12 @@ namespace WPFContactManager
             contacts.AddRange(sql.ReadContacts());
             dataView.ItemsSource = contacts;
         }
+
+        private void ShowDetails(object sender, RoutedEventArgs e)
+        {
+
+            MessageBox.Show(dataView.SelectedItem.ToString());
+        }
        
 
     }
