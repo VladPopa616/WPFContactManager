@@ -28,12 +28,11 @@ namespace WPFContactManager
             
         }
 
-        private void Data_Loaded(object sender, RoutedEventArgs e)
+        private void OnLoad(object sender, RoutedEventArgs e)
         {
             List<Contact> contacts = new List<Contact>();
-            contacts.Add(sql.ReadContacts().ToList());
+            contacts.AddRange(sql.ReadContacts());
             dataView.ItemsSource = contacts;
-            
         }
        
 

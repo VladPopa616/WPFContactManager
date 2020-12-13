@@ -7,19 +7,51 @@
         mc:Ignorable="d"
         Title="Window2" Height="450" Width="800">
 
-    <ListView Margin="10" Name="dataView">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <WrapPanel>
-                    <TextBlock Text="{Binding ID}" FontWeight="Bold"/>
-                    <TextBlock Text="{Binding FirstName}" FontWeight="Bold"/>
-                    <TextBlock Text="{Binding LastName}" FontWeight="Bold"/>
-                    <TextBlock Text="{Binding Email}" FontWeight="Bold"/>
-                    <TextBlock Text="{Binding PhoneNumber}" FontWeight="Bold"/>
-                </WrapPanel>
-            </DataTemplate>
-        </ListView.ItemTemplate>
+    <ListView Margin="10" x:Name="dataView" Loaded="OnLoad">
+        <ListView.View>
+            <GridView>
+                
+                <GridViewColumn Header="ID">
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding ID}" FontWeight="Bold"/>
+                        </DataTemplate>
+                     </GridViewColumn.CellTemplate>
+                </GridViewColumn>
 
+                <GridViewColumn Header="First name">
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding FirstName}" FontWeight="Bold"/>
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+
+                <GridViewColumn Header="Last Name">
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding LastName}" FontWeight="Bold"/>
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+
+                <GridViewColumn Header="Email">
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Email}" FontWeight="Bold"/>
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+
+                <GridViewColumn Header="Phone Number">
+                    <GridViewColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding PhoneNumber}" FontWeight="Bold"/>
+                        </DataTemplate>
+                    </GridViewColumn.CellTemplate>
+                </GridViewColumn>
+            </GridView>
+        </ListView.View>
     </ListView>
     
 </Window>

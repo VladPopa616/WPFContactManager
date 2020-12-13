@@ -64,14 +64,7 @@ namespace WPFContactManager
                     {
                         while (reader.Read())
                         {
-                            Contact contact = new Contact();
-                            object Id = reader["Id"];
-                            object FName = reader["FirstName"];
-                            object LName = reader["LastName"];
-                            object Email = reader["Email"];
-                            object Phone = reader["PhoneNumber"];
-
-                            contacts.Add(contact);
+                            contacts.Add(new Contact((int)reader["ID"], reader["FirstName"].ToString(), reader["LastName"].ToString(), reader["Email"].ToString(), reader["PhoneNumber"].ToString()));
                         }
                     }
                 }
