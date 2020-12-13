@@ -22,7 +22,7 @@
                 <GridViewColumn Header="First name">
                     <GridViewColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding FirstName}" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding fn}" FontWeight="Bold"/>
                         </DataTemplate>
                     </GridViewColumn.CellTemplate>
                 </GridViewColumn>
@@ -30,7 +30,7 @@
                 <GridViewColumn Header="Last Name">
                     <GridViewColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding LastName}" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding ln}" FontWeight="Bold"/>
                         </DataTemplate>
                     </GridViewColumn.CellTemplate>
                 </GridViewColumn>
@@ -38,7 +38,7 @@
                 <GridViewColumn Header="Email">
                     <GridViewColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding Email}" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding email}" FontWeight="Bold"/>
                         </DataTemplate>
                     </GridViewColumn.CellTemplate>
                 </GridViewColumn>
@@ -46,7 +46,7 @@
                 <GridViewColumn Header="Phone Number">
                     <GridViewColumn.CellTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding PhoneNumber}" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding phone}" FontWeight="Bold"/>
                         </DataTemplate>
                     </GridViewColumn.CellTemplate>
                 </GridViewColumn>
